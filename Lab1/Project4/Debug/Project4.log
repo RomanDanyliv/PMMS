@@ -1,0 +1,7 @@
+﻿  main.cpp
+c:\users\neyro\documents\visual studio 2015\projects\project4\project4\main.cpp(74): warning C4309: 'argument': truncation of constant value
+c:\users\neyro\documents\visual studio 2015\projects\project4\project4\main.cpp(75): warning C4309: 'argument': truncation of constant value
+c:\users\neyro\documents\visual studio 2015\projects\project4\project4\main.cpp(97): warning C4309: 'argument': truncation of constant value
+c:\users\neyro\documents\visual studio 2015\projects\project4\project4\main.cpp(98): warning C4309: 'argument': truncation of constant value
+  Project4.vcxproj -> C:\Users\Neyro\Documents\Visual Studio 2015\Projects\Project4\Debug\Project4.exe
+  Project4.vcxproj -> C:\Users\Neyro\Documents\Visual Studio 2015\Projects\Project4\Debug\Project4.pdb (Partial PDB)
