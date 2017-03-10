@@ -1,0 +1,4 @@
+﻿  ConsoleApplication11.cpp
+c:\users\neyro\documents\visual studio 2015\projects\consoleapplication11\consoleapplication11\consoleapplication11.cpp(4): warning C4627: '#include <windows.h>': skipped when looking for precompiled header use
+  c:\users\neyro\documents\visual studio 2015\projects\consoleapplication11\consoleapplication11\consoleapplication11.cpp(4): note: Add directive to 'stdafx.h' or rebuild precompiled header
+  ConsoleApplication11.vcxproj -> C:\Users\Neyro\Documents\Visual Studio 2015\Projects\ConsoleApplication11\Debug\ConsoleApplication11.exe

@@ -1,0 +1,9 @@
+﻿  ConsoleApplication11.cpp
+ConsoleApplication11.cpp(4): warning C4627: '#include <windows.h>': skipped when looking for precompiled header use
+  ConsoleApplication11.cpp(4): note: Add directive to 'stdafx.h' or rebuild precompiled header
+  Generating code
+  1 of 6 functions (16.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  ConsoleApplication11.vcxproj -> C:\Users\Neyro\Documents\Visual Studio 2015\Projects\ConsoleApplication11\Release\ConsoleApplication11.exe
