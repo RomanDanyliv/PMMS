@@ -1,0 +1,34 @@
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\bin\Debug\lab5.1.exe.config
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\bin\Debug\lab5.1.exe
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\bin\Debug\lab5.1.pdb
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\bin\Debug\Tao.DevIl.dll
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\bin\Debug\Tao.FreeGlut.dll
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\bin\Debug\Tao.OpenGl.dll
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\bin\Debug\Tao.Platform.Windows.dll
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\bin\Debug\Tao.DevIl.xml
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\bin\Debug\Tao.FreeGlut.xml
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\bin\Debug\Tao.OpenGl.xml
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\bin\Debug\Tao.Platform.Windows.xml
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\obj\Debug\lab5.1.csprojResolveAssemblyReference.cache
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\obj\Debug\lab5._1.Form1.resources
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\obj\Debug\lab5._1.Properties.Resources.resources
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\obj\Debug\lab5.1.csproj.GenerateResource.Cache
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\obj\Debug\lab5.1.exe
+c:\users\vas\documents\visual studio 2015\Projects\lab5.1\lab5.1\obj\Debug\lab5.1.pdb
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\bin\Debug\lab5.1.exe.config
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\obj\Debug\lab5.1.exe
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\obj\Debug\lab5.1.pdb
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\bin\Debug\lab5.1.exe
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\bin\Debug\lab5.1.pdb
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\bin\Debug\Tao.DevIl.dll
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\bin\Debug\Tao.FreeGlut.dll
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\bin\Debug\Tao.OpenGl.dll
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\bin\Debug\Tao.Platform.Windows.dll
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\bin\Debug\Tao.DevIl.xml
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\bin\Debug\Tao.FreeGlut.xml
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\bin\Debug\Tao.OpenGl.xml
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\bin\Debug\Tao.Platform.Windows.xml
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\obj\Debug\lab5.1.csprojResolveAssemblyReference.cache
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\obj\Debug\lab5._1.Form1.resources
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\obj\Debug\lab5._1.Properties.Resources.resources
+C:\Users\Neyro\Desktop\Lab5\lab5.1\lab5.1\obj\Debug\lab5.1.csproj.GenerateResource.Cache
