@@ -47,50 +47,50 @@ namespace lab5._1
 
             Gl.glTexEnvi(Gl.GL_TEXTURE_ENV, Gl.GL_TEXTURE_ENV_MODE, Gl.GL_MODULATE);
             Gl.glLightModeli(Gl.GL_LIGHT_MODEL_COLOR_CONTROL, Gl.GL_SEPARATE_SPECULAR_COLOR);
-            Gl.glClear(Gl.GL_COLOR_BUFFER_BIT | Gl.GL_DEPTH_BUFFER_BIT);
+            Gl.glClear(Gl.GL_COLOR_BUFFER_BIT | Gl.GL_DEPTH_BUFFER_BIT); Gl.glLightModeli(Gl.GL_LIGHT_MODEL_COLOR_CONTROL, Gl.GL_SEPARATE_SPECULAR_COLOR);
+            Gl.glEnable(Gl.GL_NORMALIZE);
+            Gl.glMaterialfv(Gl.GL_FRONT_LEFT, Gl.GL_SPECULAR, color);
+            Gl.glMaterialfv(Gl.GL_FRONT_LEFT, Gl.GL_SHININESS, shininess);
+            Gl.glMaterialfv(Gl.GL_FRONT_RIGHT, Gl.GL_SPECULAR, color2);
+            Gl.glMaterialfv(Gl.GL_FRONT_RIGHT, Gl.GL_SHININESS, shininess);
+
+            float[] light0_diffuse = { 1f, 0.0f, 0.0f };
+            float[] light0_direction = { -0.4f, 2f, 1.0f, -0.0f };
+
+            Gl.glEnable(Gl.GL_LIGHT0);
+
+            Gl.glLightfv(Gl.GL_LIGHT0, Gl.GL_DIFFUSE, light0_diffuse);
+            Gl.glLightfv(Gl.GL_LIGHT0, Gl.GL_POSITION, light0_direction);
+
+            float[] light0_diffuse2 = { 0f, 1f, 0.0f };
+            float[] light0_direction2 = { 0f, -2f, 1.0f, -0.0f };
+
+            Gl.glEnable(Gl.GL_LIGHT1);
+
+            Gl.glLightfv(Gl.GL_LIGHT1, Gl.GL_DIFFUSE, light0_diffuse2);
+            Gl.glLightfv(Gl.GL_LIGHT1, Gl.GL_POSITION, light0_direction2);
+
+            Gl.glLightModeli(Gl.GL_LIGHT_MODEL_COLOR_CONTROL, Gl.GL_SEPARATE_SPECULAR_COLOR);
+            Gl.glTexParameteri(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_MIN_FILTER, Gl.GL_NEAREST);
+            Gl.glTexParameteri(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_MAG_FILTER, Gl.GL_NEAREST);
             Gl.glPushMatrix();
-            Gl.glTranslated(0,0,-1);
+            Gl.glTranslated(0,0,-5);
             Gl.glRotated(-90, 0.5, 0.2, 0);
             Gl.glRotated(angl ,0,0,1);
-            Gl.glLightModeli(Gl.GL_LIGHT_MODEL_COLOR_CONTROL, Gl.GL_SEPARATE_SPECULAR_COLOR);
             Gl.glEnable(Gl.GL_TEXTURE_2D);
 
             Gl.glBindTexture(Gl.GL_TEXTURE_2D, Image);
-            Gl.glTexParameteri(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_MIN_FILTER, Gl.GL_NEAREST);
-            Gl.glTexParameteri(Gl.GL_TEXTURE_2D, Gl.GL_TEXTURE_MAG_FILTER, Gl.GL_NEAREST);
             Glu.GLUquadric quadr;
             quadr = Glu.gluNewQuadric();
             Glu.gluQuadricTexture(quadr, Gl.GL_TRUE);
             Gl.glEnable(Gl.GL_TEXTURE_2D);
             Gl.glColor3d(1, 1, 1);
-            Glu.gluSphere(quadr, 0.1, 32, 32);
+            Glu.gluSphere(quadr, 0.8, 32, 32);
             Gl.glDisable(Gl.GL_TEXTURE_2D);
-            Gl.glLightModeli(Gl.GL_LIGHT_MODEL_COLOR_CONTROL, Gl.GL_SEPARATE_SPECULAR_COLOR);
-            Gl.glEnable(Gl.GL_NORMALIZE);
-            Gl.glMaterialfv(Gl.GL_FRONT_LEFT, Gl.GL_SPECULAR, color);
-            Gl.glMaterialfv(Gl.GL_FRONT_LEFT, Gl.GL_SHININESS, shininess); 
-            Gl.glMaterialfv(Gl.GL_FRONT_RIGHT, Gl.GL_SPECULAR, color2); 
-            Gl.glMaterialfv(Gl.GL_FRONT_RIGHT, Gl.GL_SHININESS, shininess);
-
-            float[] light0_diffuse = { 1f, 0.0f, 0.0f };
-            float[] light0_direction = { 0.4f, 0.8f, 1.0f, -0.0f };
-
-            Gl.glEnable(Gl.GL_LIGHT0); 
-
-            Gl.glLightfv(Gl.GL_LIGHT0, Gl.GL_DIFFUSE, light0_diffuse);
-            Gl.glLightfv(Gl.GL_LIGHT0, Gl.GL_POSITION, light0_direction);
-
-            float[] light0_diffuse2 = { 0f, 1f, 0.0f }; 
-            float[] light0_direction2 = { -0.2f, 0.0f, 1.0f, -0.0f };
-
-            Gl.glEnable(Gl.GL_LIGHT1); 
-
-            Gl.glLightfv(Gl.GL_LIGHT1, Gl.GL_DIFFUSE, light0_diffuse2);
-            Gl.glLightfv(Gl.GL_LIGHT1, Gl.GL_POSITION, light0_direction2); 
-
-            angl += 2;
             Gl.glPopMatrix();
             Gl.glDisable(Gl.GL_TEXTURE_2D);
+            
+            angl += 2;
             Gl.glFlush();
             anTvas.Invalidate();
         }
