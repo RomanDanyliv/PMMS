@@ -1,0 +1,13 @@
+C:\Users\Neyro\Documents\Visual Studio 2015\Projects\Lab6\Lab6\bin\Release\Lab6.exe
+C:\Users\Neyro\Documents\Visual Studio 2015\Projects\Lab6\Lab6\bin\Release\Lab6.pdb
+C:\Users\Neyro\Documents\Visual Studio 2015\Projects\Lab6\Lab6\obj\Release\Lab6.csprojResolveAssemblyReference.cache
+C:\Users\Neyro\Documents\Visual Studio 2015\Projects\Lab6\Lab6\obj\Release\MainWindow.g.cs
+C:\Users\Neyro\Documents\Visual Studio 2015\Projects\Lab6\Lab6\obj\Release\App.g.cs
+C:\Users\Neyro\Documents\Visual Studio 2015\Projects\Lab6\Lab6\obj\Release\Lab6_MarkupCompile.cache
+C:\Users\Neyro\Documents\Visual Studio 2015\Projects\Lab6\Lab6\obj\Release\Lab6_MarkupCompile.lref
+C:\Users\Neyro\Documents\Visual Studio 2015\Projects\Lab6\Lab6\obj\Release\MainWindow.baml
+C:\Users\Neyro\Documents\Visual Studio 2015\Projects\Lab6\Lab6\obj\Release\Lab6.g.resources
+C:\Users\Neyro\Documents\Visual Studio 2015\Projects\Lab6\Lab6\obj\Release\Lab6.Properties.Resources.resources
+C:\Users\Neyro\Documents\Visual Studio 2015\Projects\Lab6\Lab6\obj\Release\Lab6.csproj.GenerateResource.Cache
+C:\Users\Neyro\Documents\Visual Studio 2015\Projects\Lab6\Lab6\obj\Release\Lab6.exe
+C:\Users\Neyro\Documents\Visual Studio 2015\Projects\Lab6\Lab6\obj\Release\Lab6.pdb
