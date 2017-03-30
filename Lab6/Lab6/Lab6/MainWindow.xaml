@@ -12,37 +12,78 @@
             <Setter Property="Width" Value="100"/>
             <Setter Property="Height" Value="20"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
-            <EventSetter Event="Click" Handler="button_Click"/>
             <EventSetter Event="MouseEnter" Handler="Button_MouseEnter"/>
             <EventSetter Event="MouseLeave" Handler="Button_MouseLeave"/>
         </Style>
+        <Style x:Key="buttonEvent1" BasedOn="{StaticResource buttonStyle}"
+               TargetType="Button">
+            <EventSetter Event="Click" Handler="button_Click"></EventSetter>
+        </Style>
+        <Style x:Key="buttonEvent2" BasedOn="{StaticResource buttonStyle}"
+               TargetType="Button">
+            <EventSetter Event="Click" Handler="button2_Click"></EventSetter>
+        </Style>
         <Style x:Key="checkBoxStyle" TargetType="CheckBox">
             <Setter Property="Margin" Value="3"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
             <EventSetter Event="Checked" Handler="CheckBoxChanged"/>
             <EventSetter Event="Unchecked" Handler="CheckBoxChanged"/>
+        </Style>
+        <Style TargetType="Slider" x:Key="sliderStyle">
+            <Setter Property="Maximum" Value="5"/>
+            <Setter Property="Minimum" Value="1"/>
+            <Setter Property="Value" Value="1"/>
+            <Setter Property="Ticks" Value="1"/>
+            <EventSetter Event="ValueChanged" Handler="sl_ValueChanged"></EventSetter>
         </Style>
     </Window.Resources>
     <Grid Background="White" Margin="0,0,2,2">
         <Border BorderThickness="2" BorderBrush="CornflowerBlue" Margin="10,20,0,159" HorizontalAlignment="Left" Width="269" >
-            <StackPanel Width="auto" Height="auto"
-                       HorizontalAlignment="Stretch"
-                        VerticalAlignment="Center"
-                        Margin="5">
-                <CheckBox x:Name="Rotation" Content="Rotation" Style="{StaticResource checkBoxStyle}"/>
-                <CheckBox x:Name="Deleting" Content="Deleting" Style="{StaticResource checkBoxStyle}"/>
-                <CheckBox x:Name="Grow" Content="Grow" Style="{StaticResource checkBoxStyle}"/>
-                <CheckBox x:Name="Fading" Content="Fading" Style="{StaticResource checkBoxStyle}"/>
-            </StackPanel>
+            <ListBox Width="265">
+                <ListBoxItem>
+                   <StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="Rotation" Content="Rotation" Style="{StaticResource checkBoxStyle}"/>
+                       <Slider Name="sl1" Width="100" Margin="50,0,0,0" Style="{StaticResource sliderStyle}"></Slider>
+                   </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="Deleting" Content="Deleting" Style="{StaticResource checkBoxStyle}"/>
+                        <Slider Name="sl2" Width="100" Margin="50,0,0,0" Style="{StaticResource sliderStyle}"></Slider>
+                    </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="Grow" Content="Grow" Style="{StaticResource checkBoxStyle}"/>
+                        <Slider Name="sl3" Width="100" Margin="65,0,0,0" Style="{StaticResource sliderStyle}"></Slider>
+                    </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="Fading" Content="Fading" Style="{StaticResource checkBoxStyle}"/>
+                        <Slider Name="sl4" Width="100" Margin="58,0,0,0" Style="{StaticResource sliderStyle}"></Slider>
+                    </StackPanel>
+                </ListBoxItem>
+            </ListBox>
         </Border>
         <Border BorderThickness="2" BorderBrush="CornflowerBlue" Margin="10,181,0,23" HorizontalAlignment="Left" Width="269" >
-            <StackPanel Width="auto" Height="auto"
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <StackPanel Width="auto" Height="auto"
                        HorizontalAlignment="Stretch"
                         VerticalAlignment="Center"
                         Margin="5">
-                <Button Name="RedButton" Style="{StaticResource buttonStyle}" Background="#FFC91111"/>
-                <Button Name="BlueButton" Style="{StaticResource buttonStyle}" Background="#FF1F2CA6"/>
-                <Button Name="GreenButton" Style="{StaticResource buttonStyle}" Background="#FF2FB822"/>
+                    <Button Name="RedButton" Style="{StaticResource buttonEvent1}" Background="#FFC91111"/>
+                    <Button Name="BlueButton" Style="{StaticResource buttonEvent1}" Background="#FF1F2CA6"/>
+                    <Button Name="GreenButton" Style="{StaticResource buttonEvent1}" Background="#FF2FB822"/>
+                </StackPanel>
+                <StackPanel Width="auto" Height="auto"
+                       HorizontalAlignment="Stretch"
+                        VerticalAlignment="Center"
+                        Margin="5">
+                    <Button Name="YellowButton" Style="{StaticResource buttonEvent2}" Background="#FFE2BF20"/>
+                    <Button Name="BrownButton" Style="{StaticResource buttonEvent2}" Background="#FF40414D"/>
+                    <Button Name="CyanButton" Style="{StaticResource buttonEvent2}" Background="#FF438A95"/>
+                </StackPanel>
             </StackPanel>
         </Border>
         <TextBox x:Name="MainText" Text="1234" Margin="362,157,0,0" Height="21" VerticalAlignment="Top" HorizontalAlignment="Left" Width="34">

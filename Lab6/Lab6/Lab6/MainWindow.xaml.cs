@@ -42,7 +42,7 @@ namespace Lab6
             if ((sender as CheckBox).IsChecked == true)
             {
                 checkBoxGrow=new DoubleAnimation();
-                checkBoxGrow.By = 4;
+                checkBoxGrow.By = 6;
                 checkBoxGrow.Duration = TimeSpan.FromMilliseconds(1000);
                 (sender as CheckBox).BeginAnimation(CheckBox.FontSizeProperty,checkBoxGrow);
             }
@@ -68,6 +68,7 @@ namespace Lab6
                     FadingAnim.To = 0.0;
                     FadingAnim.Duration = TimeSpan.FromMilliseconds(1500);
                     FadingAnim.AutoReverse = true;
+                    FadingAnim.SpeedRatio = sl4.Value;
                     FadingAnim.RepeatBehavior = new RepeatBehavior(1500);
                     MainText.BeginAnimation(TextBox.OpacityProperty, FadingAnim);
                     AnimationChecked();
@@ -88,6 +89,7 @@ namespace Lab6
                     DeletingAnim.To = 0.1;
                     DeletingAnim.Duration = TimeSpan.FromMilliseconds(1000);
                     DeletingAnim.AutoReverse = true;
+                    DeletingAnim.SpeedRatio = sl2.Value;
                     DeletingAnim.RepeatBehavior = new RepeatBehavior(1000);
                     MainText.BeginAnimation(TextBox.WidthProperty, DeletingAnim);
                     AnimationChecked();
@@ -106,6 +108,7 @@ namespace Lab6
                 {
                     RotationAnim = new DoubleAnimation(0, 360, TimeSpan.FromSeconds(2));
                     RotationAnim.RepeatBehavior = new RepeatBehavior(1000);
+                    RotationAnim.SpeedRatio = sl1.Value;
                     var rt = (RotateTransform)MainText.RenderTransform;
                     rt.CenterX = MainText.Width / 2;
                     rt.CenterY = MainText.Height / 2;
@@ -128,6 +131,7 @@ namespace Lab6
                     GrowAnim.To = MainText.FontSize + 10;
                     GrowAnim.Duration = TimeSpan.FromMilliseconds(1500);
                     GrowAnim.AutoReverse = true;
+                    GrowAnim.SpeedRatio = sl3.Value;
                     GrowAnim.RepeatBehavior = new RepeatBehavior(1500);
                     MainText.BeginAnimation(TextBox.FontSizeProperty, GrowAnim);
                     AnimationChecked();
@@ -142,7 +146,7 @@ namespace Lab6
                 }
         }
 
-        private ColorAnimation RedAnim= null;
+        private ColorAnimation RedAnim= null, YellowAnim=null;
         private DoubleAnimation ButtonAnim;
 
         private void Button_MouseLeave(object sender, MouseEventArgs e)
@@ -162,7 +166,33 @@ namespace Lab6
             (sender as Button).BeginAnimation(Button.WidthProperty, ButtonAnim);
         }
 
-        private Button lastSender=null;
+        private Button lastSender = null, lastSender2 = null;
+
+        private void sl_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (sender == sl1 && RotationAnim!=null)
+            {
+                RotationAnim.SpeedRatio = sl1.Value;
+                var rt = (RotateTransform)MainText.RenderTransform;
+                rt.BeginAnimation(RotateTransform.AngleProperty, RotationAnim);
+            }
+            if (sender == sl2 && DeletingAnim!=null)
+            {
+                DeletingAnim.SpeedRatio = sl2.Value;
+                DeletingAnim.From = MeasureString(MainText.Text, MainText).Width;
+                MainText.BeginAnimation(TextBox.WidthProperty, DeletingAnim);
+            }
+            if (sender == sl3 && GrowAnim!=null)
+            {
+                GrowAnim.SpeedRatio = sl3.Value;
+                MainText.BeginAnimation(TextBox.FontSizeProperty, GrowAnim);
+            }
+            if (sender == sl4 && FadingAnim!=null)
+            {
+                FadingAnim.SpeedRatio = sl4.Value;
+                MainText.BeginAnimation(TextBox.OpacityProperty, FadingAnim);
+            }
+        }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
@@ -179,7 +209,7 @@ namespace Lab6
             lastSender = (sender as Button);
             RedAnim =new ColorAnimation();
             RedAnim.From = ((SolidColorBrush)MainText.Foreground).Color;
-            if ((sender as Button)==RedButton)
+            if ((sender as Button) == RedButton)
                 RedAnim.To = Colors.Red;
             if ((sender as Button) == BlueButton)
                 RedAnim.To = Colors.Blue;
@@ -188,6 +218,32 @@ namespace Lab6
             RedAnim.Duration = TimeSpan.FromMilliseconds(1500);
             MainText.Foreground=new SolidColorBrush() {Opacity = 1.0f};
             MainText.Foreground.BeginAnimation(SolidColorBrush.ColorProperty, RedAnim);
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            if (YellowAnim != null)
+            {
+                YellowAnim = new ColorAnimation();
+                YellowAnim.To = Colors.Black;
+                YellowAnim.Duration = TimeSpan.FromMilliseconds(500);
+                MainText.Background.BeginAnimation(SolidColorBrush.ColorProperty, YellowAnim);
+                YellowAnim = null;
+                if ((sender as Button) == lastSender2)
+                    return;
+            }
+            lastSender2 = (sender as Button);
+            YellowAnim = new ColorAnimation();
+            YellowAnim.From = ((SolidColorBrush)MainText.Background).Color;
+            if ((sender as Button) == YellowButton)
+                YellowAnim.To = Colors.Yellow;
+            if ((sender as Button) == BrownButton)
+                YellowAnim.To = Colors.Brown;
+            if ((sender as Button) == CyanButton)
+                YellowAnim.To = Colors.DarkCyan;
+            YellowAnim.Duration = TimeSpan.FromMilliseconds(1500);
+            MainText.Background = new SolidColorBrush() { Opacity = 1.0f };
+            MainText.Background.BeginAnimation(SolidColorBrush.ColorProperty, YellowAnim);
         }
 
         private Size MeasureString(string candidate, TextBox textBlock)
